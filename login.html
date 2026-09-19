@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login - Inventory Store Management</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f5f5f5;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-page {
+            width: 100%;
+            padding: 30px 20px;
+        }
+
+        .login-card {
+            width: 100%;
+            max-width: 520px;
+            margin: auto;
+            background: white;
+            padding: 45px;
+            border-radius: 12px;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+        }
+
+        .icon {
+            width: 70px;
+            height: 70px;
+            background: #1976d2;
+            border-radius: 10px;
+            margin: 0 auto 25px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 34px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 10px;
+            color: #111;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #777;
+            margin-bottom: 35px;
+            font-size: 16px;
+        }
+
+        .form-group {
+            margin-bottom: 22px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 9px;
+            font-weight: bold;
+            color: #222;
+        }
+
+        input {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 7px;
+            font-size: 15px;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #1976d2;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 15px;
+            background: #111;
+            color: white;
+            border: none;
+            border-radius: 7px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+
+        .login-btn:hover {
+            background: #222;
+        }
+
+        .demo-box {
+            background: #f4f4f4;
+            padding: 18px;
+            margin-top: 25px;
+            border-radius: 7px;
+            color: #555;
+            line-height: 1.7;
+        }
+
+        .demo-box strong {
+            color: #222;
+        }
+
+        .register-text {
+            text-align: center;
+            margin-top: 25px;
+            color: #555;
+        }
+
+        .register-text a {
+            color: #1976d2;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .register-text a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login-page">
+
+        <div class="login-card">
+
+            <div class="icon">
+                📦
+            </div>
+
+            <h1>Inventory Store Management</h1>
+
+            <p class="subtitle">
+                Login to access your dashboard
+            </p>
+
+            <form method="POST" action="/login">
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Enter your password"
+                    >
+                </div>
+
+                <button
+                    type="submit"
+                    class="login-btn"
+                    id="login-btn"
+                >
+                    Login
+                </button>
+
+            </form>
+
+            <div class="demo-box">
+                <strong>Demo Credentials:</strong>
+
+                <br>
+
+                <strong>Manager:</strong>
+                manager@inventory.com / manager123
+
+                <br>
+
+                <strong>Staff:</strong>
+                Register a new account
+            </div>
+
+            <p class="register-text">
+                Don't have an account?
+                <a href="/register" id="register-link">
+                    Register here
+                </a>
+            </p>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
