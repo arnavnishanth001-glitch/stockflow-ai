@@ -2,8 +2,34 @@
 <html>
 <head>
     <title>Dashboard</title>
+    <title>{{ role }} Dashboard</title>
 </head>
+
 <body>
     <h1>Dashboard</h1>
+
+    {% if dashboard_id == "manager-dashboard-page" %}
+        <div id="manager-dashboard-page">
+            <h1>Inventory Manager Dashboard</h1>
+
+            <p>Welcome, {{ session["user_name"] }}!</p>
+
+            <a id="manager-logout-link" href="{{ url_for('auth.logout') }}">
+                Logout
+            </a>
+        </div>
+
+    {% elif dashboard_id == "staff-dashboard-page" %}
+        <div id="staff-dashboard-page">
+            <h1>Staff Member Dashboard</h1>
+
+            <p>Welcome, {{ session["user_name"] }}!</p>
+
+            <a id="staff-logout-link" href="{{ url_for('auth.logout') }}">
+                Logout
+            </a>
+        </div>
+    {% endif %}
+
 </body>
 </html>
