@@ -1,9 +1,11 @@
-
 from flask import Flask, redirect, url_for
+
 from models import db
+
 from controllers.db_controller import db_bp
 from controllers.auth_controller import auth_bp
 from controllers.main_controller import main
+from controllers.dashboard_controller import dashboard
 
 
 app = Flask(__name__)
@@ -28,6 +30,7 @@ db.init_app(app)
 app.register_blueprint(db_bp)
 app.register_blueprint(auth_bp)
 app.register_blueprint(main)
+app.register_blueprint(dashboard)
 
 
 # Home page → Login page
